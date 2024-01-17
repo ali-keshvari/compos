@@ -1,0 +1,19 @@
+<app-divider>
+    Modal Component
+</app-divider>
+<button class="ui green button" (click)="onChangeModal()">Show Modal</button>
+<app-modal [defaultButton]="false" (onClose)="onChangeModal()" *ngIf="showModal">
+    <modal-header>
+        <h2>Modal Header</h2>
+    </modal-header>
+    <modal-content>
+        <h3>this is content</h3>
+    </modal-content>
+    <modal-footer>
+        <button class="ui button green" (click)="onChangeModal()">close</button>
+    </modal-footer>
+</app-modal>
+<app-divider>
+    Accordion Component
+</app-divider>
+<app-accordion [items]="items"></app-accordion>
